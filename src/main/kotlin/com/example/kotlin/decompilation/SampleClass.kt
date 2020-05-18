@@ -41,6 +41,9 @@ class SampleClass {
         for (s in b) {
             println(s)
         }
+
+        A().a1
+        A().b()
     }
 
     fun twoMaps_map_then_foreach() { //this is not converted
@@ -54,3 +57,13 @@ class SampleClass {
 }
 
 data class Group(val arabic: Int, val roman: String)
+
+class A {
+    val a1 = 1
+}
+
+fun A.b(): Int {
+    return this.a1
+
+}
+
